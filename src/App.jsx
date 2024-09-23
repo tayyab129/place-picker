@@ -11,6 +11,7 @@ function App() {
   const selectedPlace = useRef();
   const [pickedPlaces, setPickedPlaces] = useState([]);
 
+  const currentYear = new Date().getFullYear();
   function handleStartRemovePlace(id) {
     modal.current.open();
     selectedPlace.current = id;
@@ -67,6 +68,9 @@ function App() {
           onSelectPlace={handleSelectPlace}
         />
       </main>
+      <footer>
+        <p>&copy;{currentYear} Tayyab softak. All right reserved.</p>
+      </footer>
     </>
   );
 }

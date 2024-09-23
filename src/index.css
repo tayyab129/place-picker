@@ -206,6 +206,21 @@ header p {
   animation: slide-down-fade-in 0.3s ease-out forwards;
 }
 
+footer {
+  text-align: center;
+  padding: 1rem;
+  
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
 @keyframes slide-down-fade-in {
   from {
     opacity: 0;
@@ -225,5 +240,79 @@ header p {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+
+
+/* Media query for mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+
+  header img {
+    width: 3rem; /* Reduce size for mobile */
+    height: 3rem;
+  }
+
+  header h1 {
+    font-size: 2rem; /* Smaller font size for header text */
+    letter-spacing: 0.5rem;
+  }
+
+  header p {
+    font-size: 1rem; 
+    max-width: 30ch; 
+  }
+
+  .places-category {
+    max-width: 100%;
+    margin: 1rem auto;
+    padding: 0.75rem;
+    border-width: 1px; 
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  header img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+    max-width: 25ch;
+  }
+
+  .places-category {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 0.75rem; 
+    font-size: 0.9rem; 
+  }
+
+  footer p {
+    font-size: 0.85rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  footer {
+    padding: 0.5rem;
+    font-size: 0.8rem; 
+  }
+
+  footer p {
+    font-size: 0.75rem;
   }
 }
